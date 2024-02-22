@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="projects-title" style="display: flex; justify-content: center;">
+        <h1>{{ project_details.name }}</h1>
+    </div>
+
+    <div class="projects-description" style="display: flex; justify-content: center;">
+        <h3>{{ project_details.Description }}</h3>
+    </div>
+
+    <div class="projects-Languages" style="display: flex; justify-content: center;">
+        <h2> Languages </h2>
+    </div>
+
+    <center>
+    {% for i in project_details.Languages %}
+            <span> {{i}} &nbsp; </span>
+    {% endfor %}
+    </center>
+
+    <div class="projects-libs" style="display: flex; justify-content: center;">
+        <h2> Additional Libraries </h2>
+    </div>
+
+    <center>
+    {% for i in project_details.Additional_Libraries %}
+        <span> {{ i }} &nbsp; </span>
+    {% endfor %}
+    </center>
+
+    <center><h3> Project URL </h3></center>
+    <center style = "color:blue;"> {{project_details.url}} </center>
+    <br>
+    <center>
+        <a href="/myapp/projects">Back</a>
+    </center>
+
+</body>
+</html>

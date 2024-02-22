@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="projects-title" style="display: flex; justify-content: center;">
+        <h1>My Projects</h1>
+    </div>
+
+    <!-- Loop all over the projects -->
+    <center>
+    {% for project in my_projects %}
+        <a href="/myapp/projectByID/{{ project.id }}"><h2>{{ project.name }}</h2></a>
+    {% endfor %}
+    </center>
+
+    <center>
+        <a href="/myapp">Back</a>
+    </center>
+
+</body>
+</html>
