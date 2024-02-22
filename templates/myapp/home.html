@@ -13,12 +13,13 @@
     <!-- Loop all over the projects -->
     <center>
     {% for project in my_projects %}
-        <a href="/myapp/projectByID/{{ project.id }}"><h2>{{ project.name }}</h2></a>
+        <!-- <a href="/myapp/projectByID/{{ project.id }}"><h2>{{ project.name }}</h2></a> -->
+        <a href="{% url 'projectGetFromId' project.id %}"><h2>{{ project.name }}</h2></a>
     {% endfor %}
     </center>
 
     <center>
-        <a href="/myapp">Back</a>
+        <a href="{% url 'my_name' %}">Back</a>
     </center>
 
 </body>
