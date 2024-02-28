@@ -9,5 +9,5 @@ pip install -r requirements.txt
 ```sh
 python manage.py runserver
 ```
-- Paste the URL from the terminal in the browser. Something like `127.0.0.1:8000`
+- Paste the URL from the terminal in the browser. URL will be like `127.0.0.1:8000`
 - Add `/myapp` to the url
